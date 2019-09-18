@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nsv_page_overview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="website.asteroit.popularmovies.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_detail_poster"
+                android:layout_width="110dp"
+                android:layout_height="165dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_detail_title"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/iv_detail_poster"
+                android:textColor="#fff"
+                tools:text="Wonder Woman (2017)" />
+
+            <LinearLayout
+                android:id="@+id/runtime_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_alignStart="@+id/tv_detail_title"
+                android:layout_below="@+id/tv_detail_title"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    style="@style/IconDetailActivity"
+                    android:src="@drawable/ic_access_time" />
+
+                <TextView
+                    android:id="@+id/tv_detail_runtime"
+                    style="@style/TextIconDetailActivity"
+                    android:textColor="#fff"
+                    tools:text="2h 2m" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_alignStart="@+id/tv_detail_title"
+                android:layout_below="@+id/runtime_parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    style="@style/IconDetailActivity"
+                    android:src="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/tv_detail_rating"
+                    style="@style/TextIconDetailActivity"
+                    android:textColor="#FFEB3B"
+                    tools:text="8.5 / 10" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_detail_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            tools:text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
